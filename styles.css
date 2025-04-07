@@ -1,0 +1,113 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #33333371;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #4CAF50;
+}
+
+.navbar.dark-mode {
+    background-color: #222;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #0400ff;
+}
+
+/* Grid Layout */
+.content {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #007bff;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}
+
+/* Animações */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #333333;
+    animation: typing 4s steps(30) infinite;
+}
+
+/* Botão de Dark Mode */
+#toggle-darkmode {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggle-darkmode:hover {
+    background-color: #0056b3;
+}
